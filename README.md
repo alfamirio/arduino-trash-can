@@ -1,5 +1,5 @@
 # arduino-trash-can
-Code for an automatic tash can with arduino uno r3
+Code for an automatic trash can with arduino uno r3
 
 ## Addicional ideas
 - White led to illuminate interior of can
