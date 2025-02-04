@@ -1,3 +1,9 @@
+# Some files
+esp32s3-telegram-bot*
+
+# Backups
+*~
+
 # Prerequisites
 *.d
 
