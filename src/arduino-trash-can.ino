@@ -91,7 +91,7 @@ bool isObjectDetected() {
 // Determina si ha estado mas de 10s encendido sin detectar movimiento
 bool shouldBeOpen() {
     float timeElapsed = computeTimeElapse(counterOpenMoment, counter, delayTime);
-    bool shouldLidBeOpen = timeElapsed < delayTimeClose;
+    bool shouldLidBeOpen = (timeElapsed < delayTimeClose)  && (timeElapsed > 0);
     if (debug) {
         aprintf("TimeElapsed: %f, ShouldLidBeOpened %d\n", timeElapsed, shouldLidBeOpen);
     }
@@ -107,7 +107,7 @@ void turnOffLed() {
 }
 
 void servoOpenLid() {
-    servoMotor.write(90);
+    servoMotor.write(70);
 }
 
 void servoCloseLid() {
