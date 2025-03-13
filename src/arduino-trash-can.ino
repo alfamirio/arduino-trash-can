@@ -12,7 +12,7 @@
 
 int const debug = true;
 int const delayTime = 1000;
-int const delayTimeClose = 5000;
+int const delayTimeClose = 3000;
 int const trigPin = 6;
 int const echoPin = 5;
 int const ledPin = 13;
@@ -80,7 +80,7 @@ float computeTimeElapse(int start, int end, int step) {
 // if distance less than d cm (<=0 is over range)
 bool isObjectDetected() {
     int distance = computeDistance();
-    bool objectDetected = distance <= 50 && distance > 0;
+    bool objectDetected = distance <= 30 && distance > 0;
     if (debug) {
         aprintf("Distance: %d, Detected %d\n", distance, objectDetected);
     }
